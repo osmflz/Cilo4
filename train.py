@@ -7,7 +7,7 @@ print("Using:", device)
 model = YOLO("yolov8s.pt")
 
 model.train(
-    data="datasets/wheel_dataset/data.yaml",
+    data="wheel_dataset/data.yaml",
     epochs=50,
     imgsz=640,
     batch=8,           # M1 Pro için ideal
