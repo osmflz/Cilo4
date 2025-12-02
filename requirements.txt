@@ -2,3 +2,4 @@ ultralytics
 opencv-python
 roboflow
 numpy
+torch @ https://download.pytorch.org/whl/cpu
