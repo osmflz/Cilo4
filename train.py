@@ -1,14 +1,15 @@
 from ultralytics import YOLO
+import torch
 
-# Pretrained model yükle (s, n, m fark etmez: s hızlı ve yeterli)
+device = "mps" if torch.backends.mps.is_available() else "cpu"
+print("Using:", device)
+
 model = YOLO("yolov8s.pt")
 
-DATA_PATH = "wheel_dataset/data.yaml"
-
 model.train(
-    data=DATA_PATH,
+    data="datasets/wheel_dataset/data.yaml",
     epochs=50,
     imgsz=640,
-    batch=8,
-    workers=4,
+    batch=8,           # M1 Pro için ideal
+    device=device,     # GPU kullanımı
 )
