@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Dogru_Jant', 'Yanlis_Jant']
+
+roboflow:
+  workspace: clio4-demo
+  project: cilo4-jant-in2eg
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/clio4-demo/cilo4-jant-in2eg/dataset/1
